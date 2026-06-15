@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaEdit, FaTrash, FaCheck } from "react-icons/fa";
 
 function StreamList() {
   const [movie, setMovie] = useState("");
-  const [movies, setMovies] = useState([]);
+
+  const [movies, setMovies] = useState(() => {
+    const savedMovies = localStorage.getItem("streamListMovies");
+    return savedMovies ? JSON.parse(savedMovies) : [];
+  });
+
   const [editIndex, setEditIndex] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem("streamListMovies", JSON.stringify(movies));
+  }, [movies]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +28,13 @@ function StreamList() {
       setMovies(updatedMovies);
       setEditIndex(null);
     } else {
-      setMovies([...movies, { title: movie, completed: false }]);
+      setMovies([
+        ...movies,
+        {
+          title: movie,
+          completed: false,
+        },
+      ]);
     }
 
     setMovie("");
@@ -37,7 +52,12 @@ function StreamList() {
 
   const handleComplete = (index) => {
     const updatedMovies = movies.map((item, i) =>
-      i === index ? { ...item, completed: !item.completed } : item
+      i === index
+        ? {
+            ...item,
+            completed: !item.completed,
+          }
+        : item
     );
 
     setMovies(updatedMovies);
