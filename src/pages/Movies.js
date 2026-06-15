@@ -40,27 +40,37 @@ function Movies() {
   };
 
   return (
-    <div className="page">
-      <h2>Movie Search</h2>
+  <div className="page">
+    <h2>Movie Search</h2>
 
-      <p>Search for movie information using the TMDB API.</p>
+    <p>Search for movie information using the TMDB API.</p>
 
-      <form onSubmit={searchMovies} className="movie-form">
-        <input
-          type="text"
-          placeholder="Enter movie title"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+    <form onSubmit={searchMovies} className="movie-form">
+      <input
+        type="text"
+        placeholder="Enter movie title"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
 
-        <button type="submit">Search</button>
-      </form>
+      <button type="submit">Search</button>
+    </form>
 
-      {message && <p>{message}</p>}
+    {message && <p>{message}</p>}
 
-      <div className="movie-list">
-        {movies.map((movie) => (
-          <div key={movie.id} className="movie-item">
+    <div className="movie-list">
+      {movies.map((movie) => (
+        <div
+          key={movie.id}
+          className="movie-item"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            gap: "20px",
+          }}
+        >
+          <div style={{ flex: 1 }}>
             <h3>{movie.title}</h3>
 
             <p>
@@ -69,23 +79,23 @@ function Movies() {
             </p>
 
             <p>{movie.overview || "No description available."}</p>
-
-            {movie.poster_path && (
-              <img
-                src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-                alt={movie.title}
-                style={{
-                  marginTop: "10px",
-                  borderRadius: "8px",
-                  maxWidth: "200px",
-                }}
-              />
-            )}
           </div>
-        ))}
-      </div>
+
+          {movie.poster_path && (
+            <img
+              src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+              alt={movie.title}
+              style={{
+                borderRadius: "8px",
+                maxWidth: "200px",
+              }}
+            />
+          )}
+        </div>
+      ))}
     </div>
-  );
+  </div>
+);
 }
 
 export default Movies;
