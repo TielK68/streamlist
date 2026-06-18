@@ -4,6 +4,7 @@ function Movies() {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const apiKey = "77548ad842159eff5ad3a563cbb55322";
 
@@ -16,12 +17,19 @@ function Movies() {
       return;
     }
 
+    setLoading(true);
+    setMessage("");
+
     try {
       const response = await fetch(
         `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(
           searchTerm
         )}`
       );
+
+      if (!response.ok) {
+        throw new Error("Unable to retrieve movie information.");
+      }
 
       const data = await response.json();
 
@@ -30,72 +38,77 @@ function Movies() {
         setMessage("");
       } else {
         setMovies([]);
-        setMessage("No movies found.");
+        setMessage(`No movies found for "${searchTerm}".`);
       }
     } catch (error) {
       console.error(error);
       setMovies([]);
       setMessage("Error retrieving movie information.");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-  <div className="page">
-    <h2>Movie Search</h2>
+    <div className="page">
+      <h2>Movie Search</h2>
 
-    <p>Search for movie information using the TMDB API.</p>
+      <p>Search for movie information using the TMDB API.</p>
 
-    <form onSubmit={searchMovies} className="movie-form">
-      <input
-        type="text"
-        placeholder="Enter movie title"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
+      <form onSubmit={searchMovies} className="movie-form">
+        <input
+          type="text"
+          aria-label="Movie title"
+          placeholder="Enter movie title"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
 
-      <button type="submit">Search</button>
-    </form>
+        <button type="submit" disabled={loading}>
+          {loading ? "Searching..." : "Search"}
+        </button>
+      </form>
 
-    {message && <p>{message}</p>}
+      {message && <p>{message}</p>}
 
-    <div className="movie-list">
-      {movies.map((movie) => (
-        <div
-          key={movie.id}
-          className="movie-item"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-start",
-            gap: "20px",
-          }}
-        >
-          <div style={{ flex: 1 }}>
-            <h3>{movie.title}</h3>
+      <div className="movie-list">
+        {movies.map((movie) => (
+          <div
+            key={movie.id}
+            className="movie-item"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-start",
+              gap: "20px",
+            }}
+          >
+            <div style={{ flex: 1 }}>
+              <h3>{movie.title}</h3>
 
-            <p>
-              <strong>Release Date:</strong>{" "}
-              {movie.release_date || "Not Available"}
-            </p>
+              <p>
+                <strong>Release Date:</strong>{" "}
+                {movie.release_date || "Not Available"}
+              </p>
 
-            <p>{movie.overview || "No description available."}</p>
+              <p>{movie.overview || "No description available."}</p>
+            </div>
+
+            {movie.poster_path && (
+              <img
+                src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                alt={movie.title}
+                style={{
+                  borderRadius: "8px",
+                  maxWidth: "200px",
+                }}
+              />
+            )}
           </div>
-
-          {movie.poster_path && (
-            <img
-              src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-              alt={movie.title}
-              style={{
-                borderRadius: "8px",
-                maxWidth: "200px",
-              }}
-            />
-          )}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
 }
 
 export default Movies;
