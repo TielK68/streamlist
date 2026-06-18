@@ -14,6 +14,8 @@ This repository contains the StreamList+ React application source code, project 
 
 * React Application Source Code
 * Shopping Cart System
+* Movie Search Functionality
+* TMDB API Integration
 * Local Storage Functionality
 * CSS Styling
 * Project Documentation
@@ -34,6 +36,16 @@ This repository contains the StreamList+ React application source code, project 
 * Automatically calculates total cart pricing
 * Persists cart data using Local Storage
 
+### Movie Search Integration
+
+* TMDB API integration
+* Movie search functionality
+* Displays movie posters
+* Displays release dates
+* Displays movie descriptions
+* Returns top search results
+* API error handling and validation
+
 ### Navigation
 
 * Home Page
@@ -47,6 +59,18 @@ This repository contains the StreamList+ React application source code, project 
 * Dynamic React components
 * Local Storage persistence
 * Real-time cart updates
+* Improved search validation
+* Enhanced user feedback messages
+
+### AI Testing Enhancements
+
+* GitHub Copilot code review
+* AI-assisted testing and analysis
+* Loading state implementation
+* API response validation using response.ok
+* Accessibility improvements using aria-label
+* Enhanced no-results messaging
+* Improved error handling and user experience
 
 ## Technologies Used
 
@@ -54,8 +78,10 @@ This repository contains the StreamList+ React application source code, project 
 * JavaScript
 * CSS
 * React Router
+* TMDB API
 * Local Storage
 * GitHub
+* GitHub Copilot
 
 ## Assignment Deliverables
 
@@ -64,6 +90,14 @@ This repository contains the StreamList+ React application source code, project 
 * Project Gantt Chart
 * Wireframes
 * PowerPoint Presentation
+* Video Demonstration
+
+### Week 3 Assignment 1
+
+* TMDB API Integration
+* Local Storage Persistence
+* Movie Search Functionality
+* API Data Retrieval
 * Video Demonstration
 
 ### Week 3 Assignment 2 Part 1
@@ -76,9 +110,23 @@ This repository contains the StreamList+ React application source code, project 
 * CSS Enhancements
 * Video Demonstration
 
+### Week 4 Assignment 1
+
+* AI-Assisted Code Review
+* GitHub Copilot Testing
+* Movies Component Improvements
+* API Validation Enhancements
+* Accessibility Improvements
+* User Experience Enhancements
+* Video Demonstration
+
 ## GitHub Repository
 
 Source code and project deliverables are maintained within this repository for project tracking and version control.
+
+Repository URL:
+
+https://github.com/TielK68/streamlist
 
 ## Author
 
