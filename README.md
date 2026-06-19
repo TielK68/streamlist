@@ -1,4 +1,4 @@
-# StreamList+ Subscription Streaming Platform
+# StreamList+ Entertainment Management Platform
 
 ## INT499 Information Technology Capstone Project
 
@@ -6,9 +6,9 @@
 
 ## Project Overview
 
-StreamList+ is a React-based subscription streaming platform designed to provide users with a centralized location to discover, manage, and organize entertainment content. The application is being developed as part of the INT499 Information Technology Capstone Project.
+StreamList+ is a React-based entertainment management platform designed to provide users with a centralized location to discover movies, manage streaming subscriptions, and organize entertainment-related products and services. The application is being developed as part of the INT499 Information Technology Capstone Project at the University of Arizona Global Campus.
 
-This repository contains the StreamList+ React application source code, project documentation, and assignment deliverables completed throughout the project lifecycle.
+This repository contains the StreamList+ React application source code, project documentation, assignment deliverables, and enhancements completed throughout the capstone project lifecycle.
 
 ## Repository Contents
 
@@ -17,7 +17,9 @@ This repository contains the StreamList+ React application source code, project 
 * Movie Search Functionality
 * TMDB API Integration
 * Local Storage Functionality
+* React Router Navigation
 * CSS Styling
+* GitHub Copilot Assisted Improvements
 * Project Documentation
 * Assignment Deliverables
 * Presentation Materials
@@ -30,7 +32,7 @@ This repository contains the StreamList+ React application source code, project 
 * Displays subscription and accessory products from Data.js
 * Allows users to add products to a shopping cart
 * Prevents duplicate subscription purchases
-* Allows EZ Tech accessories to be added multiple times
+* Allows accessory products to be added multiple times
 * Supports quantity increases and decreases
 * Allows users to remove items from the cart
 * Automatically calculates total cart pricing
@@ -43,8 +45,15 @@ This repository contains the StreamList+ React application source code, project 
 * Displays movie posters
 * Displays release dates
 * Displays movie descriptions
-* Returns top search results
+* Returns up to five search results
 * API error handling and validation
+
+### Local Storage Features
+
+* Persists shopping cart data between sessions
+* Persists movie list data locally
+* Automatically restores saved user data on application startup
+* Reduces data loss during page refreshes
 
 ### Navigation
 
@@ -72,10 +81,26 @@ This repository contains the StreamList+ React application source code, project 
 * Enhanced no-results messaging
 * Improved error handling and user experience
 
+## Testing and Quality Assurance
+
+The StreamList+ application was evaluated using AI-assisted testing techniques with GitHub Copilot. Testing activities included:
+
+* Code review and analysis
+* User interface validation
+* API response validation
+* Error handling verification
+* Accessibility review
+* Search functionality testing
+* Shopping cart functionality testing
+* Local Storage persistence testing
+
+Improvements identified through AI-assisted testing were implemented to enhance reliability, usability, and overall application performance.
+
 ## Technologies Used
 
 * React
 * JavaScript
+* HTML5
 * CSS
 * React Router
 * TMDB API
@@ -95,8 +120,8 @@ This repository contains the StreamList+ React application source code, project 
 ### Week 3 Assignment 1
 
 * TMDB API Integration
-* Local Storage Persistence
 * Movie Search Functionality
+* Local Storage Data Persistence
 * API Data Retrieval
 * Video Demonstration
 
@@ -113,6 +138,7 @@ This repository contains the StreamList+ React application source code, project 
 ### Week 4 Assignment 1
 
 * AI-Assisted Code Review
+* AI-Assisted Testing Documentation
 * GitHub Copilot Testing
 * Movies Component Improvements
 * API Validation Enhancements
@@ -122,7 +148,7 @@ This repository contains the StreamList+ React application source code, project 
 
 ## GitHub Repository
 
-Source code and project deliverables are maintained within this repository for project tracking and version control.
+Source code and project deliverables are maintained within this repository for project tracking, version control, and project documentation.
 
 Repository URL:
 
@@ -131,6 +157,8 @@ https://github.com/TielK68/streamlist
 ## Author
 
 Itiel I. King
+
+Bachelor of Science in Information Technology
 
 University of Arizona Global Campus
 
