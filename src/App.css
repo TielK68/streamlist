@@ -354,3 +354,101 @@ button:hover {
     font-size: 24px;
   }
 }
+
+/* LOGIN PAGE */
+
+.login-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.login-card {
+  background-color: #1f2933;
+  border: 1px solid #f4c542;
+  border-radius: 14px;
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.login-card h1 {
+  color: #f4c542;
+  margin-bottom: 10px;
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+}
+
+.login-card p {
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.google-login-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+}
+
+.logout-btn {
+  margin-left: 20px;
+  padding: 8px 16px;
+}
+
+/* CREDIT CARD PAGE */
+
+.credit-card-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #1f2933;
+  border: 1px solid #f4c542;
+  border-radius: 14px;
+  padding: 35px;
+}
+
+.credit-card-container h2 {
+  color: #f4c542;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.credit-card-container p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.credit-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.credit-card-form label {
+  font-weight: bold;
+  margin-bottom: -10px;
+}
+
+.credit-card-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 6px;
+}
+
+.credit-card-form button {
+  margin-top: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+}

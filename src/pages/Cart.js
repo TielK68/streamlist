@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import list from "../data";
 
 function Cart() {
+  const navigate = useNavigate();
+
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
@@ -44,6 +47,7 @@ function Cart() {
 
   const removeFromCart = (id) => {
     setCart(cart.filter((product) => product.id !== id));
+    setWarning("");
   };
 
   const changeQuantity = (id, amount) => {
@@ -56,12 +60,20 @@ function Cart() {
         )
         .filter((product) => product.quantity > 0)
     );
+
+    setWarning("");
   };
 
-  const totalItems = cart.reduce(
-    (sum, product) => sum + product.quantity,
-    0
-  );
+  const handleCheckout = () => {
+    if (cart.length === 0) {
+      setWarning("Please add at least one item to the cart before checkout.");
+      return;
+    }
+
+    navigate("/credit-card");
+  };
+
+  const totalItems = cart.reduce((sum, product) => sum + product.quantity, 0);
 
   const totalPrice = cart.reduce(
     (sum, product) => sum + product.price * product.quantity,
@@ -103,13 +115,9 @@ function Cart() {
               <p>Quantity: {product.quantity}</p>
 
               <div className="cart-buttons">
-                <button onClick={() => changeQuantity(product.id, -1)}>
-                  -
-                </button>
+                <button onClick={() => changeQuantity(product.id, -1)}>-</button>
 
-                <button onClick={() => changeQuantity(product.id, 1)}>
-                  +
-                </button>
+                <button onClick={() => changeQuantity(product.id, 1)}>+</button>
 
                 <button onClick={() => removeFromCart(product.id)}>
                   Remove
@@ -120,6 +128,10 @@ function Cart() {
         )}
 
         <h2>Total Price: ${totalPrice.toFixed(2)}</h2>
+
+        <button className="checkout-btn" onClick={handleCheckout}>
+          Checkout
+        </button>
       </div>
     </div>
   );

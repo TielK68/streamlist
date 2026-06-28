@@ -8,64 +8,108 @@
 
 ---
 
-## Project Overview
+# Project Overview
 
-StreamList is a completed React-based Progressive Web Application (PWA) developed as the final project for the INT499 Information Technology Capstone course at the University of Arizona Global Campus.
+StreamList is a React-based Progressive Web Application (PWA) developed as the final capstone project for the INT499 Information Technology Capstone course at the University of Arizona Global Campus.
 
-The application enables users to:
+The application provides users with a centralized platform for managing movie watchlists, searching live movie information through The Movie Database (TMDB) API, managing streaming subscriptions and entertainment accessories, completing a secure checkout process, and storing user data using Local Storage.
 
-* Manage a personal streaming watchlist
-* Search live movie information using The Movie Database (TMDB) API
-* Manage streaming subscriptions and entertainment accessories
-* Store data using Local Storage
-* Install the application as a desktop Progressive Web App (PWA)
-
-Throughout the five-week capstone project, StreamList evolved from a basic React application into a fully functional Progressive Web Application demonstrating modern frontend development practices, responsive design, REST API integration, AI-assisted testing, and Progressive Web App technologies.
-
-The completed application demonstrates React component architecture, client-side routing, REST API integration, Progressive Web App technologies, Local Storage persistence, responsive interface design, AI-assisted testing, and modern frontend software development practices.
+Throughout the five-week capstone project, StreamList evolved from a basic React application into a fully functional Progressive Web Application demonstrating modern frontend development, responsive user interface design, authentication, client-side routing, REST API integration, Local Storage persistence, AI-assisted testing, and Progressive Web App technologies.
 
 ---
 
-## Key Features
+# Project Objectives
 
-### Personal Watchlist
+The primary objectives of StreamList include:
 
-* Create, edit, complete, and delete movie entries
+* Demonstrate modern React application development.
+* Implement client-side routing using React Router.
+* Integrate an external REST API.
+* Develop CRUD functionality.
+* Persist application data using Local Storage.
+* Implement Progressive Web App (PWA) technologies.
+* Design a secure authentication workflow.
+* Implement a shopping cart and checkout process.
+* Develop a credit card management system.
+* Demonstrate software testing and quality assurance techniques.
+
+---
+
+# Features
+
+## User Authentication
+
+* Simulated Google OAuth login
+* Protected application routes
+* Automatic redirection for unauthenticated users
+* Logout functionality
+* User session persistence using Local Storage
+
+---
+
+## Personal Watchlist
+
+* Create movie entries
+* Edit movie titles
+* Mark movies as completed
+* Delete movies
 * Persistent Local Storage
 * Full CRUD functionality
 
-### Movie Search
+---
+
+## Movie Search
 
 * Live TMDB API integration
 * Dynamic movie search
-* Displays movie posters, release dates, and descriptions
+* Displays movie posters
+* Displays release dates
+* Displays movie descriptions
 * Returns up to five search results
 * Loading indicators
 * API response validation
 * User-friendly error handling
 
-### Shopping Cart
+---
 
-* Browse streaming subscriptions and entertainment accessories
+## Shopping Cart
+
+* Browse streaming subscriptions
+* Browse entertainment accessories
 * Prevent duplicate subscription purchases
-* Adjustable item quantities
+* Adjustable quantities
 * Remove items from the cart
-* Automatic total calculations
+* Automatic total price calculations
 * Persistent shopping cart using Local Storage
 
-### Progressive Web App Features
+---
+
+## Credit Card Management
+
+* Checkout workflow
+* Credit Card Management page
+* Card number formatting (1234 5678 9012 3456)
+* Form validation
+* Payment information stored using Local Storage
+* Confirmation message after successful save
+
+---
+
+## Progressive Web App Features
 
 * Desktop installation support
 * Web App Manifest
 * Service Worker implementation
-* Standalone application mode
 * Cached application resources
-* Chrome Developer Tools validation
+* Standalone application mode
 * Improved application performance
+* Google Chrome Developer Tools validation
 
-### AI-Assisted Testing Improvements
+---
 
-The Movies component was evaluated using GitHub Copilot to identify opportunities for improvement.
+## AI-Assisted Testing
+
+The Movies component was reviewed using GitHub Copilot to identify opportunities for improvement.
 
 Enhancements include:
 
@@ -78,7 +122,7 @@ Enhancements include:
 
 ---
 
-## Technologies Used
+# Technologies Used
 
 * React
 * React Router
@@ -86,17 +130,17 @@ Enhancements include:
 * HTML5
 * CSS3
 * TMDB REST API
-* Local Storage
 * Progressive Web Apps (PWA)
 * Web App Manifest
 * Service Workers
+* Local Storage
 * Git
 * GitHub
 * GitHub Copilot
 
 ---
 
-## Installation
+# Installation
 
 Clone the repository:
 
@@ -122,29 +166,31 @@ Run the application:
 npm start
 ```
 
-Open your browser and navigate to:
+Open your browser:
 
-```text
+```
 http://localhost:3000
 ```
 
 ---
 
-## Project Structure
+# Project Structure
 
-```text
+```
 streamlist
 │
 ├── public
 │   ├── index.html
 │   ├── manifest.json
-│   ├── service-worker.js
+│   └── service-worker.js
 │
 ├── src
 │   ├── pages
+│   │   ├── Login.js
 │   │   ├── StreamList.js
 │   │   ├── Movies.js
 │   │   ├── Cart.js
+│   │   ├── CreditCard.js
 │   │   └── About.js
 │   │
 │   ├── App.js
@@ -153,30 +199,30 @@ streamlist
 │   └── Data.js
 │
 ├── package.json
+├── package-lock.json
 └── README.md
 ```
 
 ---
 
-## Capstone Accomplishments
+# Application Workflow
 
-* React component-based architecture
-* Multi-page application using React Router
-* Full CRUD watchlist functionality
-* TMDB REST API integration
-* Shopping cart with business rules
-* Persistent Local Storage
-* Responsive interface design
-* Progressive Web App implementation
-* Desktop installation support
-* AI-assisted testing improvements
-* GitHub version control
+1. User opens StreamList.
+2. User is redirected to the secure login page.
+3. User signs in using the simulated Google OAuth process.
+4. Authenticated users gain access to the application.
+5. Users manage their movie watchlist.
+6. Users search movies using the TMDB API.
+7. Users add streaming subscriptions and accessories to the shopping cart.
+8. Users proceed through checkout.
+9. Users enter credit card information.
+10. Payment information is stored using Local Storage.
 
 ---
 
-## Testing and Quality Assurance
+# Testing and Quality Assurance
 
-Testing included:
+Testing activities included:
 
 * Functional testing
 * User interface validation
@@ -185,36 +231,58 @@ Testing included:
 * Shopping cart validation
 * Business rule verification
 * Local Storage persistence testing
+* Authentication workflow validation
+* Credit card validation
 * Progressive Web App validation
 * Service Worker verification
 * Desktop installation testing
 
 ---
 
-## Future Enhancements
+# Capstone Accomplishments
+
+* React component architecture
+* Multi-page application using React Router
+* Full CRUD functionality
+* REST API integration
+* Shopping cart implementation
+* Checkout workflow
+* Credit card management
+* Authentication system
+* Protected routes
+* Local Storage persistence
+* Progressive Web App implementation
+* Desktop installation support
+* AI-assisted testing
+* GitHub version control
+
+---
+
+# Future Enhancements
 
 Potential future improvements include:
 
-* User authentication
-* Cloud synchronization
+* Real Google OAuth authentication
+* Cloud database integration
 * Push notifications
-* Offline movie history
+* User profiles
 * Favorite movie collections
-* Dark mode support
+* Purchase history
+* Dark mode
 * Expanded streaming providers
+* Payment gateway integration
 
 ---
 
-## GitHub Repository
+# GitHub Repository
 
-The complete source code for the StreamList application, including the Progressive Web App implementation, is available at:
+Repository:
 
-**Repository:**
-https://github.com/TielK68/streamlist
+**https://github.com/TielK68/streamlist**
 
 ---
 
-## Author
+# Author
 
 **Itiel I. King**
 
@@ -228,6 +296,6 @@ INT499 Information Technology Capstone Project
 
 ---
 
-## License
+# License
 
-This repository was created for educational purposes as part of the INT499 Information Technology Capstone course at the University of Arizona Global Campus.
+This project was developed for educational purposes as part of the INT499 Information Technology Capstone course at the University of Arizona Global Campus.
