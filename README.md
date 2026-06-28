@@ -8,11 +8,11 @@
 
 ---
 
-# Project Overview
+## Project Overview
 
 StreamList is a completed React-based Progressive Web Application (PWA) developed as the final project for the INT499 Information Technology Capstone course at the University of Arizona Global Campus.
 
-The application provides users with a centralized platform to:
+The application enables users to:
 
 * Manage a personal streaming watchlist
 * Search live movie information using The Movie Database (TMDB) API
@@ -22,48 +22,38 @@ The application provides users with a centralized platform to:
 
 Throughout the five-week capstone project, StreamList evolved from a basic React application into a fully functional Progressive Web Application demonstrating modern frontend development practices, responsive design, REST API integration, AI-assisted testing, and Progressive Web App technologies.
 
+The completed application demonstrates React component architecture, client-side routing, REST API integration, Progressive Web App technologies, Local Storage persistence, responsive interface design, AI-assisted testing, and modern frontend software development practices.
+
 ---
 
-# Key Features
+## Key Features
 
-## Personal Watchlist
+### Personal Watchlist
 
-* Create movie entries
-* Edit existing movies
-* Mark movies as completed
-* Delete movies
+* Create, edit, complete, and delete movie entries
 * Persistent Local Storage
 * Full CRUD functionality
 
----
-
-## Movie Search
+### Movie Search
 
 * Live TMDB API integration
 * Dynamic movie search
-* Displays movie posters
-* Displays release dates
-* Displays movie descriptions
+* Displays movie posters, release dates, and descriptions
 * Returns up to five search results
 * Loading indicators
 * API response validation
 * User-friendly error handling
 
----
+### Shopping Cart
 
-## Shopping Cart
-
-* Browse streaming subscriptions
-* Browse entertainment accessories
+* Browse streaming subscriptions and entertainment accessories
 * Prevent duplicate subscription purchases
 * Adjustable item quantities
 * Remove items from the cart
 * Automatic total calculations
 * Persistent shopping cart using Local Storage
 
----
-
-## Progressive Web App Features
+### Progressive Web App Features
 
 * Desktop installation support
 * Web App Manifest
@@ -73,9 +63,7 @@ Throughout the five-week capstone project, StreamList evolved from a basic React
 * Chrome Developer Tools validation
 * Improved application performance
 
----
-
-## AI-Assisted Testing Improvements
+### AI-Assisted Testing Improvements
 
 The Movies component was evaluated using GitHub Copilot to identify opportunities for improvement.
 
@@ -90,7 +78,7 @@ Enhancements include:
 
 ---
 
-# Technologies Used
+## Technologies Used
 
 * React
 * React Router
@@ -108,7 +96,7 @@ Enhancements include:
 
 ---
 
-# Installation
+## Installation
 
 Clone the repository:
 
@@ -134,17 +122,17 @@ Run the application:
 npm start
 ```
 
-Open:
+Open your browser and navigate to:
 
-```
+```text
 http://localhost:3000
 ```
 
 ---
 
-# Project Structure
+## Project Structure
 
-```
+```text
 streamlist
 │
 ├── public
@@ -170,7 +158,7 @@ streamlist
 
 ---
 
-# Capstone Accomplishments
+## Capstone Accomplishments
 
 * React component-based architecture
 * Multi-page application using React Router
@@ -186,7 +174,7 @@ streamlist
 
 ---
 
-# Testing and Quality Assurance
+## Testing and Quality Assurance
 
 Testing included:
 
@@ -203,7 +191,7 @@ Testing included:
 
 ---
 
-# Future Enhancements
+## Future Enhancements
 
 Potential future improvements include:
 
@@ -217,7 +205,7 @@ Potential future improvements include:
 
 ---
 
-# GitHub Repository
+## GitHub Repository
 
 The complete source code for the StreamList application, including the Progressive Web App implementation, is available at:
 
@@ -226,7 +214,7 @@ https://github.com/TielK68/streamlist
 
 ---
 
-# Author
+## Author
 
 **Itiel I. King**
 
@@ -240,6 +228,6 @@ INT499 Information Technology Capstone Project
 
 ---
 
-# License
+## License
 
-This project was created for educational purposes as part of the INT499 Information Technology Capstone course at the University of Arizona Global Campus.
+This repository was created for educational purposes as part of the INT499 Information Technology Capstone course at the University of Arizona Global Campus.
