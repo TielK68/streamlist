@@ -1,165 +1,245 @@
-# StreamList+ Entertainment Management Platform
+# StreamList
 
-## INT499 Information Technology Capstone Project
+## Modern Movie & Streaming Management Platform
 
-### Prepared by Itiel I. King
+**INT499 Information Technology Capstone Project**
+**University of Arizona Global Campus**
+**Developed by Itiel I. King**
 
-## Project Overview
+---
 
-StreamList+ is a React-based entertainment management platform designed to provide users with a centralized location to discover movies, manage streaming subscriptions, and organize entertainment-related products and services. The application is being developed as part of the INT499 Information Technology Capstone Project at the University of Arizona Global Campus.
+# Project Overview
 
-This repository contains the StreamList+ React application source code, project documentation, assignment deliverables, and enhancements completed throughout the capstone project lifecycle.
+StreamList is a completed React-based Progressive Web Application (PWA) developed as the final project for the INT499 Information Technology Capstone course at the University of Arizona Global Campus.
 
-## Repository Contents
+The application provides users with a centralized platform to:
 
-* React Application Source Code
-* Shopping Cart System
-* Movie Search Functionality
-* TMDB API Integration
-* Local Storage Functionality
-* React Router Navigation
-* CSS Styling
-* GitHub Copilot Assisted Improvements
-* Project Documentation
-* Assignment Deliverables
-* Presentation Materials
-* Demonstration Videos
+* Manage a personal streaming watchlist
+* Search live movie information using The Movie Database (TMDB) API
+* Manage streaming subscriptions and entertainment accessories
+* Store data using Local Storage
+* Install the application as a desktop Progressive Web App (PWA)
 
-## Features
+Throughout the five-week capstone project, StreamList evolved from a basic React application into a fully functional Progressive Web Application demonstrating modern frontend development practices, responsive design, REST API integration, AI-assisted testing, and Progressive Web App technologies.
 
-### Shopping Cart System
+---
 
-* Displays subscription and accessory products from Data.js
-* Allows users to add products to a shopping cart
-* Prevents duplicate subscription purchases
-* Allows accessory products to be added multiple times
-* Supports quantity increases and decreases
-* Allows users to remove items from the cart
-* Automatically calculates total cart pricing
-* Persists cart data using Local Storage
+# Key Features
 
-### Movie Search Integration
+## Personal Watchlist
 
-* TMDB API integration
-* Movie search functionality
+* Create movie entries
+* Edit existing movies
+* Mark movies as completed
+* Delete movies
+* Persistent Local Storage
+* Full CRUD functionality
+
+---
+
+## Movie Search
+
+* Live TMDB API integration
+* Dynamic movie search
 * Displays movie posters
 * Displays release dates
 * Displays movie descriptions
 * Returns up to five search results
-* API error handling and validation
-
-### Local Storage Features
-
-* Persists shopping cart data between sessions
-* Persists movie list data locally
-* Automatically restores saved user data on application startup
-* Reduces data loss during page refreshes
-
-### Navigation
-
-* Home Page
-* Movies Page
-* Cart Page
-* About Page
-
-### User Experience
-
-* Responsive CSS styling
-* Dynamic React components
-* Local Storage persistence
-* Real-time cart updates
-* Improved search validation
-* Enhanced user feedback messages
-
-### AI Testing Enhancements
-
-* GitHub Copilot code review
-* AI-assisted testing and analysis
-* Loading state implementation
-* API response validation using response.ok
-* Accessibility improvements using aria-label
-* Enhanced no-results messaging
-* Improved error handling and user experience
-
-## Testing and Quality Assurance
-
-The StreamList+ application was evaluated using AI-assisted testing techniques with GitHub Copilot. Testing activities included:
-
-* Code review and analysis
-* User interface validation
+* Loading indicators
 * API response validation
-* Error handling verification
-* Accessibility review
-* Search functionality testing
-* Shopping cart functionality testing
-* Local Storage persistence testing
+* User-friendly error handling
 
-Improvements identified through AI-assisted testing were implemented to enhance reliability, usability, and overall application performance.
+---
 
-## Technologies Used
+## Shopping Cart
+
+* Browse streaming subscriptions
+* Browse entertainment accessories
+* Prevent duplicate subscription purchases
+* Adjustable item quantities
+* Remove items from the cart
+* Automatic total calculations
+* Persistent shopping cart using Local Storage
+
+---
+
+## Progressive Web App Features
+
+* Desktop installation support
+* Web App Manifest
+* Service Worker implementation
+* Standalone application mode
+* Cached application resources
+* Chrome Developer Tools validation
+* Improved application performance
+
+---
+
+## AI-Assisted Testing Improvements
+
+The Movies component was evaluated using GitHub Copilot to identify opportunities for improvement.
+
+Enhancements include:
+
+* Loading state implementation
+* API response validation using `response.ok`
+* Improved error handling
+* Accessibility improvements using `aria-label`
+* Enhanced no-results messaging
+* Improved user feedback
+
+---
+
+# Technologies Used
 
 * React
-* JavaScript
-* HTML5
-* CSS
 * React Router
-* TMDB API
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* TMDB REST API
 * Local Storage
+* Progressive Web Apps (PWA)
+* Web App Manifest
+* Service Workers
+* Git
 * GitHub
 * GitHub Copilot
 
-## Assignment Deliverables
+---
 
-### Week 2 Assignment 2 Part 1
+# Installation
 
-* Project Gantt Chart
-* Wireframes
-* PowerPoint Presentation
-* Video Demonstration
+Clone the repository:
 
-### Week 3 Assignment 1
+```bash
+git clone https://github.com/TielK68/streamlist.git
+```
 
-* TMDB API Integration
-* Movie Search Functionality
-* Local Storage Data Persistence
-* API Data Retrieval
-* Video Demonstration
+Navigate to the project:
 
-### Week 3 Assignment 2 Part 1
+```bash
+cd streamlist
+```
 
-* React Shopping Cart System
-* Cart Quantity Management
-* Product Removal Functionality
-* Total Price Calculations
-* Local Storage Integration
-* CSS Enhancements
-* Video Demonstration
+Install dependencies:
 
-### Week 4 Assignment 1
+```bash
+npm install
+```
 
-* AI-Assisted Code Review
-* AI-Assisted Testing Documentation
-* GitHub Copilot Testing
-* Movies Component Improvements
-* API Validation Enhancements
-* Accessibility Improvements
-* User Experience Enhancements
-* Video Demonstration
+Run the application:
 
-## GitHub Repository
+```bash
+npm start
+```
 
-Source code and project deliverables are maintained within this repository for project tracking, version control, and project documentation.
+Open:
 
-Repository URL:
+```
+http://localhost:3000
+```
 
+---
+
+# Project Structure
+
+```
+streamlist
+│
+├── public
+│   ├── index.html
+│   ├── manifest.json
+│   ├── service-worker.js
+│
+├── src
+│   ├── pages
+│   │   ├── StreamList.js
+│   │   ├── Movies.js
+│   │   ├── Cart.js
+│   │   └── About.js
+│   │
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── Data.js
+│
+├── package.json
+└── README.md
+```
+
+---
+
+# Capstone Accomplishments
+
+* React component-based architecture
+* Multi-page application using React Router
+* Full CRUD watchlist functionality
+* TMDB REST API integration
+* Shopping cart with business rules
+* Persistent Local Storage
+* Responsive interface design
+* Progressive Web App implementation
+* Desktop installation support
+* AI-assisted testing improvements
+* GitHub version control
+
+---
+
+# Testing and Quality Assurance
+
+Testing included:
+
+* Functional testing
+* User interface validation
+* CRUD operation testing
+* TMDB API validation
+* Shopping cart validation
+* Business rule verification
+* Local Storage persistence testing
+* Progressive Web App validation
+* Service Worker verification
+* Desktop installation testing
+
+---
+
+# Future Enhancements
+
+Potential future improvements include:
+
+* User authentication
+* Cloud synchronization
+* Push notifications
+* Offline movie history
+* Favorite movie collections
+* Dark mode support
+* Expanded streaming providers
+
+---
+
+# GitHub Repository
+
+The complete source code for the StreamList application, including the Progressive Web App implementation, is available at:
+
+**Repository:**
 https://github.com/TielK68/streamlist
 
-## Author
+---
 
-Itiel I. King
+# Author
+
+**Itiel I. King**
 
 Bachelor of Science in Information Technology
 
 University of Arizona Global Campus
 
 INT499 Information Technology Capstone Project
+
+2026
+
+---
+
+# License
+
+This project was created for educational purposes as part of the INT499 Information Technology Capstone course at the University of Arizona Global Campus.
